@@ -12,10 +12,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import os
-from dotenv import load_dotenv
 
-# Load environment variables
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = 'g9bnw^1hcuj(=t__me%zu(3(ig_%qfb8usb66v6y3fx71^lj13'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -88,11 +85,10 @@ WSGI_APPLICATION = 'eiserproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME', 'eiser'),
-        'USER': os.environ.get('DB_USER', 'your_db_user'),
-        'PASSWORD': os.environ.get('DB_PASSWORD', 'your_db_password'),
-        'HOST': os.environ.get('DB_HOST', 'mysql-host-address'),
-        'PORT': os.environ.get('DB_PORT', '3306'),
+        'NAME': 'shabeeb$ecom',  # Format: "username$dbname"
+        'USER': 'shabeeb',        # Your PythonAnywhere username
+        'PASSWORD': 'Ecommysql*123',  # From the "Databases" tab
+        'HOST': 'shabeeb.mysql.pythonanywhere-services.com',  # Listed in "Databases" tab
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         }
