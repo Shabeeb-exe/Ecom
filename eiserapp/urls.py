@@ -1,7 +1,9 @@
 from django.urls import path
 from eiserapp import views
+from django.views.generic import RedirectView
 
 urlpatterns = [
+    path('', RedirectView.as_view(url='login/')),
     #CUSTOMER:
     path('login/', views.login, name="login"),
     path('login_post/', views.login_post, name="login_post"),
