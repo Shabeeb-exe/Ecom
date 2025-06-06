@@ -28,7 +28,7 @@ SECRET_KEY = 'g9bnw^1hcuj(=t__me%zu(3(ig_%qfb8usb66v6y3fx71^lj13'
 DEBUG = False
 
 # Add your hosting provider's domain and/or IP
-ALLOWED_HOSTS = ['your-app-name.pythonanywhere.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['shabeeb.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
